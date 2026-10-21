@@ -1,0 +1,27 @@
+{
+  "name": "trello-backend",
+  "version": "1.0.0",
+  "description": "Trello clone backend - MERN stack",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "@hello-pangea/dnd": "^18.0.1",
+    "bcryptjs": "^2.4.3",
+    "bootstrap": "^5.3.8",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-validator": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.5.0",
+    "multer": "^2.2.0",
+    "nodemailer": "^9.0.3",
+    "react-router-dom": "^7.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
