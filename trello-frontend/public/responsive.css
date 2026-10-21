@@ -1,0 +1,54 @@
+@media (max-width: 768px) {
+  /* Container aur body ko overflow se bachane ke liye */
+  body {
+    overflow-x: hidden !important;
+  }
+
+  .container, .container-fluid {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+
+  /* Rows aur Columns ki spacing fix karna */
+  .row {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  .row > [class*="col-"] {
+    padding-right: 4px !important;
+    padding-left: 4px !important;
+    width: 100% !important;
+  }
+
+  /* Cards ko mobile screen ke andar fit karna */
+  .card {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  /* Board creation form elements ko stack karna */
+  .container form, .login-card {
+    padding: 20px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Board View Lists: Horizontal scroll fix */
+  .d-flex.flex-wrap.gap-3 {
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    padding-bottom: 12px;
+    width: 100%;
+  }
+
+  .bg-light {
+    flex: 0 0 272px !important;
+    min-width: 272px !important;
+  }
+}

@@ -1,0 +1,517 @@
+/* ============================================
+   BASE
+   ============================================ */
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #f4f5f7;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #172b4d;
+}
+
+h1, h2, h5, h6 {
+  color: #172b4d;
+  font-weight: 700;
+}
+
+a {
+  color: #0079bf;
+  text-decoration: none;
+}
+a:hover {
+  color: #026aa7;
+  text-decoration: underline;
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+.btn {
+  border-radius: 3px !important;
+  font-weight: 600 !important;
+  border: none !important;
+}
+.btn-primary {
+  background-color: #0079bf !important;
+  color: #ffffff !important;
+}
+.btn-primary:hover {
+  background-color: #026aa7 !important;
+}
+.btn-outline-secondary {
+  background-color: #ffffff !important;
+  color: #172b4d !important;
+  border: 1px solid #dfe1e6 !important;
+}
+.btn-outline-secondary:hover {
+  background-color: #ebecf0 !important;
+}
+.btn-outline-danger {
+  background-color: #ffffff !important;
+  color: #eb5a46 !important;
+  border: 1px solid #eb5a46 !important;
+}
+.btn-outline-danger:hover {
+  background-color: #eb5a46 !important;
+  color: #ffffff !important;
+}
+.btn-success {
+  background-color: #61bd4f !important;
+  color: #ffffff !important;
+}
+.btn-secondary {
+  background-color: #0079bf !important;
+  color: #ffffff !important;
+}
+.btn-sm {
+  font-size: 0.85rem;
+  padding: 6px 12px;
+}
+
+/* ============================================
+   INPUTS
+   ============================================ */
+.form-control {
+  background-color: #ffffff !important;
+  color: #172b4d !important;
+  border: 2px solid #dfe1e6 !important;
+  border-radius: 3px !important;
+  padding: 8px 12px !important;
+}
+.form-control::placeholder {
+  color: #6b778c !important;
+  opacity: 1;
+}
+.form-control:focus {
+  border-color: #0079bf !important;
+  box-shadow: 0 0 0 2px rgba(0, 121, 191, 0.25) !important;
+}
+.search-input::placeholder {
+  color: #6b778c !important;
+}
+.form-control[type="date"] {
+  color: #172b4d !important;
+}
+
+.input-group {
+  display: flex !important;
+  width: 100%;
+}
+.input-group .form-control {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  flex: 1;
+}
+.input-group-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 14px;
+  background-color: #ffffff;
+  border: 2px solid #dfe1e6;
+  border-left: none;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  color: #6b778c;
+  cursor: pointer;
+}
+
+/* ============================================
+   LOGIN / SIGNUP
+   ============================================ */
+.container.mt-5 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 80vh;
+  margin: 0 auto;
+}
+.container form {
+  background-color: #ffffff;
+  border: 1px solid #dfe1e6;
+  border-radius: 6px;
+  padding: 36px;
+  box-shadow: 0 1px 3px rgba(9, 30, 66, 0.13);
+}
+.container > h2 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+.container > p {
+  text-align: center;
+  color: #6b778c;
+  margin-top: 16px;
+}
+label.form-label {
+  color: #5e6c84;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* ============================================
+   BOARDS DASHBOARD
+   ============================================ */
+.row {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  margin-right: -8px;
+  margin-left: -8px;
+}
+.row > [class*="col-"] {
+  padding-right: 8px;
+  padding-left: 8px;
+  margin-bottom: 16px;
+}
+.mb-4 > .row {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+.alert-danger {
+  background-color: #fff0ef !important;
+  border: 1px solid #eb5a46 !important;
+  color: #b04632 !important;
+  border-radius: 3px !important;
+}
+.alert-success {
+  background-color: #e3fcef !important;
+  border: 1px solid #61bd4f !important;
+  color: #3f7d32 !important;
+  border-radius: 3px !important;
+}
+
+.card {
+  background-color: #ffffff !important;
+  border: 1px solid #dfe1e6 !important;
+  border-radius: 6px !important;
+  box-shadow: 0 1px 2px rgba(9, 30, 66, 0.13);
+}
+.card-title {
+  color: #172b4d;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.card-title:hover {
+  color: #0079bf;
+}
+.card-text {
+  color: #6b778c;
+  font-size: 13px;
+}
+.text-muted {
+  color: #6b778c !important;
+}
+
+/* ============================================
+   BOARD VIEW PAGE — lists stack (vertical, full width)
+   ============================================ */
+.d-flex.flex-wrap.gap-3 {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  gap: 16px !important;
+  align-items: flex-start !important;
+  position: static !important;
+  height: auto !important;
+}
+
+/* Each list (column) — default width, media query below decides layout */
+.bg-light {
+  background-color: #ebecf0 !important;
+  border-radius: 6px !important;
+  position: static !important;
+  float: none !important;
+  height: auto !important;
+  margin: 0 !important;
+}
+
+/* Lists row — PC pe side-by-side scroll, mobile pe upar-neeche stack */
+.board-lists-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  overflow-x: auto;
+}
+
+.board-list-col {
+  min-width: 280px;
+  max-width: 280px;
+  width: 280px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 767px) {
+  .board-lists-row {
+    flex-direction: column;
+    overflow-x: visible;
+  }
+  .board-list-col {
+    min-width: 100%;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.bg-light h6 {
+  color: #172b4d;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.bg-light h6:hover {
+  color: #0079bf;
+}
+
+/* Cards inside a list */
+.bg-light .card {
+  background-color: #ffffff !important;
+  border: none !important;
+  border-radius: 6px !important;
+  color: #172b4d;
+  cursor: grab;
+  box-shadow: 0 1px 2px rgba(9, 30, 66, 0.25);
+}
+.bg-light .card:active {
+  cursor: grabbing;
+}
+.bg-light .form-control {
+  padding: 6px 10px !important;
+}
+
+.login-page {
+  min-height: 100vh;
+  background: #13151a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  background: #1d212a;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,.3);
+}
+
+.login-card h2 {
+  color: white;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.login-card .form-control {
+  background: #0b0e14;
+  color: white;
+  border: 1px solid #2d323e;
+}
+
+.login-card .form-control::placeholder {
+  color: #9fadbc;
+}
+
+.password-box {
+  position: relative;
+}
+
+.password-box input {
+  padding-right: 45px;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #9fadbc;
+}
+
+.login-card .btn-primary {
+  background: #5c6bc0;
+  border: none;
+}
+
+.login-card a {
+  color: #818cf8;
+}
+
+/* Signup/Login footer links fix */
+
+.login-card .text-center {
+  color: #9fadbc;
+}
+
+.login-card .text-center a {
+  color: #818cf8 !important;
+  text-decoration: none !important;
+  margin-left: 5px;
+}
+
+.login-card .text-center a:hover {
+  color: #a5b4fc !important;
+  text-decoration: underline !important;
+}
+
+.login-card .text-muted {
+  color: #9fadbc !important;
+}
+
+/* ================================
+   LOGIN / SIGNUP PAGE
+================================ */
+
+.login-page {
+    min-height: 100vh;
+    background: #13151a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.login-card {
+    width: 100%;
+    max-width: 420px;
+    background: #1d212a;
+    padding: 32px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.35);
+}
+
+
+.login-card h2 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+
+/* Labels */
+.login-card .form-label {
+    color: #9fadbc;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+
+/* Inputs */
+.login-card .form-control {
+    height: 44px;
+    background: #0b0e14 !important;
+    color: #ffffff !important;
+    border: 1px solid #2d323e !important;
+    border-radius: 6px;
+}
+
+
+.login-card .form-control::placeholder {
+    color: #6b778c;
+}
+
+
+.login-card .form-control:focus {
+    border-color: #818cf8 !important;
+    box-shadow: 0 0 0 2px rgba(129,140,248,0.2);
+}
+
+
+/* Password eye */
+.password-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+
+.password-wrapper .form-control {
+    padding-right: 45px !important;
+}
+
+
+.eye-icon {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9fadbc;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 10;
+}
+
+
+.eye-icon:hover {
+    color: #818cf8;
+}
+
+.login-card .btn-primary {
+    height: 44px;
+    background: #5c6bc0 !important;
+    border: none !important;
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+
+.login-card .btn-primary:hover {
+    background: #4f5bb5 !important;
+}
+
+
+/* Already account */
+.account-link {
+    text-align: center;
+    margin-top: 18px;
+    color: #9fadbc;
+    font-size: 14px;
+}
+
+
+.account-link a {
+    color: #818cf8;
+    margin-left: 5px;
+    text-decoration: none;
+}
+
+
+.account-link a:hover {
+    text-decoration: underline;
+}
+
+
+/* About link */
+.login-card .text-center a {
+    color: #818cf8;
+    text-decoration: none;
+}
+
+
+.login-card .text-center a:hover {
+    text-decoration: underline;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Saare elements ke beech gap dene ke liye */
+  padding: 12px;
+  overflow: hidden;
+  height: auto; /* Fixed height ho toh hata dein taake content ke mutabiq adjust ho */
+}
+
+/* File attachment box ke liye */
+.file-box {
+  width: 100%;
+  box-sizing: border-box;
+}
